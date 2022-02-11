@@ -17,7 +17,11 @@ public class Controller implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         try {
-            network = new Network(8189);;
+            network = new Network(8189);
+
+            Cat cat = new Cat("Name", 123);
+            network.sendFile(cat);
+
         }catch (IOException e){
             throw new RuntimeException("Impossible connect to server");
         }

@@ -14,6 +14,14 @@ public class Network {
         out = new ObjectOutputStream(socket.getOutputStream());
     }
 
+    public void sendFile(Object object){
+        try {
+            out.writeObject(object);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public void close(){
         try {
             if (in != null) {
