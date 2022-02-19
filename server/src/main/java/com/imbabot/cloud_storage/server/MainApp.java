@@ -1,7 +1,6 @@
 package com.imbabot.cloud_storage.server;
 
 import com.imbabot.cloud_storage.client.Cat;
-import sun.rmi.server.MarshalInputStream;
 
 import java.io.*;
 import java.net.ServerSocket;
@@ -24,7 +23,6 @@ public class MainApp {
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
             }
-
             System.out.println(cat);
 
 
