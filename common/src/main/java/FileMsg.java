@@ -6,16 +6,16 @@ import java.nio.file.Path;
 
 public class FileMsg extends AbstractMessage {
 
-    private String name;
+    private String fileName;
     public byte[] data;
 
 
     public String getName() {
-        return name;
+        return fileName;
     }
 
     public FileMsg(Path path) throws IOException {
-        name = path.getFileName().toString();
+        fileName = path.getFileName().toString();
         data = Files.readAllBytes(path);
     }
 }
